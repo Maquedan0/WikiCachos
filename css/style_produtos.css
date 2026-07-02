@@ -1,0 +1,258 @@
+@font-face {
+    font-family: 'monotalic';
+    src: url(../fontes/monotalic-regular.ttf)
+}
+
+@font-face {
+    font-family: 'perfectgirl';
+    src: url(../fontes/PerfectGirl-Script.ttf);
+}
+
+*{
+    margin: 0;
+}
+
+body {
+    background-color: #e4e2db;
+    font-family: 'monotalic';
+}
+
+.cabecalho {
+    display: flex;
+
+    width: 100%;
+    height: 120px;
+    background-color: rgb(189, 180, 168);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icone_wc {
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    height: 120px;
+    padding: 0 40px;
+}
+
+.icone_wc img {
+    height: 100%;
+}
+
+.links {
+    padding: 0 40px;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(128, 53, 34);
+}
+
+.item_link:hover {
+    color: rgb(32, 90, 61);
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(32, 90, 61);
+
+}
+
+.container_categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 80vw;
+}
+
+.txts_iniciais_categorias {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-image: url(../imagens/img_wc/fundo_verdinhho2.png);
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+
+}
+
+.texto1_categorias {
+    grid-column: 1 / 2;
+    grid-row: 1  2;
+
+
+    width: 300px;
+    margin: 20px;
+    padding: 50px;
+    background-color: rgba(194, 165, 131, 0.568);
+    border-radius: 20px;
+}
+
+.texto2_categorias {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+
+    width: 300px;
+    margin: 20px;
+    padding: 50px;
+    background-color: #96a78dbb;
+    border-radius: 20px;
+}
+
+.as_categorias {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.categoria {
+    display: inline-block;
+    
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: #bdb4a8;
+    border: 2px solid #bdb4a8;
+    border-radius: 6px; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease,box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    background-color: #ada396; 
+    border-color: #ada396;
+}
+
+.produtos_ressecados {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #9caa8c;
+    border-radius: 40px;
+    padding: 20px;
+
+}
+
+.titulo_produtos {
+    font-family: 'perfectgirl';
+    font-size: 50px;
+    color: rgb(128, 53, 34);
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.titulos_menores_produtos {
+    font-size: 35px;
+    color: rgb(128, 53, 34);
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ressecados {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.produtos_porosos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #bdb4a8;
+    border-radius: 40px;
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+.porosos {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.carrossel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    width: 80vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #3F6D3D #EAD8C0;
+}
+
+/* Cards */
+.card {
+    flex: 0 0 250px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/* Imagem do card */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Barra de rolagem - Chrome, Edge e Opera */
+.carrossel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carrossel::-webkit-scrollbar-track {
+    background: #EAD8C0;
+    border-radius: 10px;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: #3F6D3D;
+    border-radius: 10px;
+}
+
+.carrossel::-webkit-scrollbar-thumb:hover {
+    background: #2F5A2D;
+}
+
+.rodape {
+    background-color: rgb(97, 117, 71);
+    color: rgb(194, 165, 131);
+    text-align: center;
+    padding: 15px;
+}
+
+.voltatopo {
+    color: rgb(189, 180, 168);
+    text-decoration: none;
+}
